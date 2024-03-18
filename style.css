@@ -1,0 +1,480 @@
+/* universal parameter which is best practice */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* main contianer */
+.main{
+    position:relative;
+    z-index:13;
+}
+
+.container{
+    max-width: 100vw;
+    min-height:100vh;
+    overflow:hidden;
+}
+/* header 
+  display is flex so that we can a good header without use of absolute position which is not good practice.
+  height and weight give vw(veiwport width) and vh so that we make resonsive over website
+*/
+.header{
+    position:fixed;
+    height:22vh;
+    width:100vw;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:20;
+    background:white;
+}
+/*  image (logo) */
+.logo-div img{
+    height:15vh;
+    width:10vw;
+    border-radius:10px;
+    position: absolute;
+    left:2vw;
+    top:1vh;
+    /* transition timing funtion is ease in out(first slow then fast) */
+    transition: .2s ease-in-out;
+}
+
+.logo-div img:hover{
+    height:25vh;
+    width:16vw;
+    border-radius:10px;
+}
+
+/*  button box like home and goal and exercise etc. */
+.button-box{
+    position: absolute;
+    left:36vw;
+    height:22vh;
+    width:60vw;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    gap:1.5vw;
+}
+
+
+.button-box h4{
+    padding:10px 10px;
+    border:solid 1px black;
+    position:relative;
+    border-radius:50px;
+    font-size:1.5vw;
+    font-weight:500;
+    color:black;
+    transition: all ease .3s;
+    overflow: hidden;
+}
+/* after is pshedo element  */
+/* using after pshedo element we made a black box at the below of button and 
+ using hover element we set like that they should cover the button without overflow at hover time*/
+.button-box h4::after{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color: black;
+    left:0;
+    bottom:-100%;
+    border-radius:50%;
+    transition: all ease .3s;
+}
+
+.button-box h4:hover::after{
+     bottom:0;
+     border-radius: 0px;
+}
+
+.button-box a{
+    color: black;
+    /* text decoration use for remove under line from anchor tag */
+    text-decoration:none;
+    position: relative;
+    /* using z-index we give priority */
+    z-index: 9;
+}
+
+.button-box h4:hover a{
+    color: white;
+}
+
+/* heaing (Fit force ) */
+.img-logo-and-title-div h1{
+    position: absolute;
+    left:15vw;
+    top:3vh;
+    font-size: 2.4vw;
+    color:rgb(189, 73, 73);
+    font-weight:300;
+}
+
+/*  heding (innovators)*/
+.img-logo-and-title-div h2{
+    position: absolute;
+    left:15vw;
+    top: 7vh;
+    font-size: 3.4vw;
+    color:rgb(208, 128, 128);
+    font-weight:600;
+}
+
+/* use to make responsive */
+@media (max-width:1240px) {
+    .sign-in-div button{
+        height:12vh;
+    }
+    .img-logo-and-title-div h1{
+        position: absolute;
+        left:10vw;
+        top:3vh;
+        font-size:2.5vw;
+        color:rgb(189, 73, 73);
+        font-weight: 300;
+    }
+    
+    .img-logo-and-title-div h2{
+        position: absolute;
+        left:10vw;
+        top:11vh;
+        font-size: 3.4vw;
+        color:rgb(208, 128, 128);
+        font-weight:600;
+    }
+
+    .button-box h4{
+        padding:3px 6px;
+        color:black;
+    }
+    .content-div-1{
+        min-height:180vh;
+    }
+
+    .basic-details-about-user{
+        min-height:35vh;
+    } 
+
+    .video-div-1{
+        min-height:130vh;
+    }
+  
+    .video-div-2{
+        width:70vw;
+        min-height:120vh;
+    }
+    
+    .video-div-2 video{
+        width:70vw;
+        min-height:120vh;
+    }
+    
+     
+    .swiper {
+        width: 25vw;
+        height: 70vh;
+      }
+    
+
+}
+/* content div in which variable heaing paragraph and get started button */
+/* we divided into matrix 1 row and 2 column using grid */
+.content-div-1{
+    width:100vw;
+    max-height:100vh;
+    margin-top:21vh;
+    display: grid;
+    grid-template-rows: repeat(1,1.5fr);
+    grid-template-columns: repeat(2,1fr);
+    background:white;
+}
+
+.para-section-div-1{
+    margin-left:10vw;
+    height:90vh;
+    width:40vw;
+}
+
+@media (max-width:800px) {
+    .content-div-1{
+      min-height:80vh;
+    }
+    
+}
+
+   
+  /* variable heading css */
+   .div-1-heading-section{
+       overflow: hidden;
+   }
+
+    .div-1-heading-section .text{
+        position: relative;
+        color: rgb(117, 100, 165);
+        font-weight: 600;
+    }
+    .div-1-heading-section .text.fist-text{
+        color: aliceblue;
+    }
+    .text.second-text{
+        color: rgb(160, 160, 180);
+        font-weight: 300;
+    }
+    .text.second-text::before{
+        content: "   ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        border-left: .3vw solid rgb(60, 32, 202);
+        animation: animate 4s steps(12) infinite;
+    }
+
+    @keyframes animate{
+        40%,60%{
+            left: 100%;
+        }
+        100%{
+            left: 0%;
+        }
+
+    }
+    /*  */
+    .div-1-para-part p{
+        text-wrap:pretty;
+        font-size: 2.0vw;
+        color:black;
+    }
+    .div-1-para-part{
+       text-wrap:pretty;
+    }
+
+    .div-1-heading-section .text{
+        font-size:3vw;
+    }
+    .div-1-para-section{
+        position: relative;
+        margin-top: 2vw;
+        background:rgb(0, 255, 255);
+        border-radius: 1.5vw;
+        text-wrap:pretty;
+    }
+
+.Explore-section-div-1 button{
+    margin-top: 3vw;
+    margin-left:2vw;
+    height:4vw;
+    width:10vw;
+    text-decoration: none;
+    font-size:1.7vw;
+    border-radius:1vw;
+    color:salmon;
+    cursor: pointer;
+    background:black;
+}
+
+.Explore-section-div-1 button:hover{
+      background:rgb(77, 38, 38);
+      color:rgb(236, 138, 236);
+}
+
+/* .image-section-item-2 img{
+    height:350px;
+    width:350px;
+    margin-top: 10px;
+    border-radius:10px;
+} */
+
+/* basic details about  user */
+.basic-details-about-user{
+    position: relative;
+    width:100vw;
+    height:25vh;
+    display:grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(4,1fr);
+    padding-left:10vw;
+    background:white;
+    align-items: center;
+} 
+ .basic-details-about-user-item{
+    height: 8vw;
+    width:18vw;
+    border:solid brown .1vw;
+    border-radius:1vw;
+    display: flex;
+    overflow:auto;
+} 
+
+.basic-details-about-user-item img{
+    margin-top: 1.9vw;
+    height: 3.5vw;
+    width:3.5vw;
+    border-radius: 1vw;
+} 
+
+.basic-details-about-user-item h1{
+    position: absolute;
+    margin-top: 1.9vw;
+    margin-left:3.7vw;
+    font-size:1.5vw;
+} 
+
+.basic-details-about-user-item p{
+    margin-top:3.3vw;
+    margin-left: .1px;
+    font-size:1.5vw;
+} 
+
+/* video css */
+.video-div-1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height:100vh;
+    background:white;
+}
+
+.video-div-2{
+    width:70vw;
+    height:82vh;
+}
+
+.video-div-2 video{
+    width:70vw;
+    height:80vh;
+}
+/*feedback from user icon and heading*/
+.secondlast-page {
+    position: relative;
+    width:100vw;
+    height:130vh;
+    background-color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-secondlast-page h1{
+    position: absolute;
+    top:15vh;
+    left:10vw;
+    font-size: 2.5vw;
+    font-weight: 450;
+    color:rgb(7, 168, 213);
+}
+
+.heading-secondlast-page img{
+    position: absolute;
+    top:15vh;
+    left:0vw;
+    height:15vh;
+    width:10vw;
+}
+
+/* (swiper css) */
+.swiper {
+    width: 25vw;
+    height: 70vh;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vw;
+    font-size: 1.5vw;
+    font-weight:300;
+    color:black;
+    background:#0ef;
+  }
+
+  .swiper-slide img{
+      height:30vh;
+      width:25vw;
+  }
+
+/*  create blank page so that they give filling like sutter open */
+.last-page{
+    width:100vw;
+    height:100vh;
+}
+
+/* footer position is fixed so that we can create effect like sutter open */
+.footer{
+    position:fixed;
+    z-index:-111;
+    height:120vh;
+    width:100vw;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+    background:black;
+    padding:1vw 3vw;
+}
+
+/* basic css of footer */
+.footer .footer-name  h1{
+   font-size:10vw;
+   font-weight: 400;
+   color: white;
+}
+.footer .footer-name h2{
+    font-size:10vw;
+    font-weight: 600;
+    color:white;
+ }
+
+ .footer-top{
+     height:20vh;
+     width:100vw;
+     background: red;
+ }
+
+ .footer-bottom{
+    position: relative;
+    height:15vh;
+    width:100vw;
+    border-top:solid 2px white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.copyright h2{
+    font-size:3vw;
+    font-weight:200;
+    color:white;
+}
+
+.instagram{
+    /* position:absolute; */
+    height:15vh;
+    width:50vw;
+    display: flex;
+    align-items:center;
+}
+
+
+.instagram img{
+    position: absolute;
+    left:40vw;
+    height:10vh;
+    width:10vw;
+}
+.instagram h2{
+    font-size:3vw;
+    font-weight:200;
+    color:white;
+}

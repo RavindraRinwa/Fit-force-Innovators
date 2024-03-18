@@ -1,0 +1,141 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.triceps-dips-container{
+    position: relative;
+    min-height:120vh;
+    max-width:100vw;
+    overflow:hidden;
+}
+
+.triceps-dips-header{
+    position: relative;
+    height:15vh;
+    width:100vw;
+}
+
+.triceps-dips-title{
+    height:15vh;
+    width:35vw;
+    padding-left:1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:4vh
+   
+}
+
+.triceps-dips-heading h1{
+    font-size:3vw;
+    font-weight: 100;
+    color:rgb(166, 166, 247)
+}
+
+.triceps-dips-i img{
+    height:15vh;
+    max-width:10vw;
+}
+
+
+.triceps-dips-content{
+    height:105vh;
+    width:100vw;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+
+@media(max-width:700px){
+
+    .triceps-dips-content{
+        height:105vh;
+        width:100vw;
+        border:solid .2vh black;
+        display:flex;
+        flex-direction:column;
+    }
+}
+
+.triceps-dips-video-content{
+    height:105vh;
+    width:50vw;
+}
+
+.triceps-dips-video video{
+    height:50vh;
+    width:50vw;
+}
+
+.swiper .mySwiper{
+     background:white;
+}
+
+.swiper {
+    position: relative;
+    margin-top:5vh;
+    width:40vw;
+    height:45vh;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    background:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    width:40vw;
+    height:45vh;
+  }
+
+.triceps-dips-text-content{
+    height:105vh;
+    width:50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.triceps-dips-step-title{
+     height:10vh;
+     width:50vw;
+     display: flex;
+     gap:2vw;
+}
+.triceps-dips-step-title h1{
+   font-size: 3vw;
+   font-weight:200;
+   color:rgb(119, 182, 231);
+}
+.triceps-dips-step-title img{
+     height:8vh;
+     width:10vw;
+ }
+.triceps-dips-steps{
+    font-size:1.5vw;
+}
+
+.triceps-dips-benefit-title{
+    height:10vh;
+    width:50vw;
+    display: flex;
+    gap:2vw;
+}
+.triceps-dips-benefit-title h1{
+  font-size: 3vw;
+  font-weight:200;
+  color:rgb(119, 182, 231);
+}
+.triceps-dips-benefit-title img{
+    height:8vh;
+    width:10vw;
+}
+.triceps-dips-benefit{
+   font-size:1.5vw;
+}
+/* .push-up-step-title .push-up-step-heading */

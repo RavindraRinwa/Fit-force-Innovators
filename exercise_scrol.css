@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eaeaea;
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:60vw;
+    height:70vh;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+   
+}
+.header{
+    position:fixed;
+    height:12vh;
+    width:100vw;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:20;
+    background:white;
+}
+.logo-div img{
+    height:11vh;
+    width:8vw;
+    border-radius:10px;
+    position: absolute;
+    left:2vw;
+    top:1vh;
+}
+.button-box{
+    position: absolute;
+    left:36vw;
+    height:22vh;
+    width:60vw;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    gap:1.5vw;
+}
+
+.button-box h4{
+    padding:10px 10px;
+    border:solid 1px black;
+    position:relative;
+    border-radius:50px;
+    font-size:1.5vw;
+    font-weight:500;
+    color:black;
+    transition: all ease .3s;
+    overflow: hidden;
+}
+
+.button-box h4::after{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color: black;
+    left:0;
+    bottom:-100%;
+    border-radius:50%;
+    transition: all ease .3s;
+}
+
+.button-box h4:hover::after{
+     bottom:0;
+     border-radius: 0px;
+}
+.button-box a{
+    color: black;
+    text-decoration:none;
+    position: relative;
+    z-index: 9;
+}
+
+.button-box h4:hover a{
+    color: white;
+}
+
+.img-logo-and-title-div h1{
+    position: absolute;
+    left:15vw;
+    top:1.5vh;
+    font-size: 2.0vw;
+    color:rgb(189, 73, 73);
+    font-weight: 300;
+}
+
+.img-logo-and-title-div h2{
+    position: absolute;
+    left:15vw;
+    top: 5vh;
+    font-size: 2.4vw;
+    color:rgb(208, 128, 128);
+    font-weight:600;
+}
+
+.container .slide .item{
+    width:20vw;
+    height:30vh;
+    position: absolute;
+    top: 50%;
+    right:20%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left:0%;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(3){
+    left: 90%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left:8vw;
+    width:300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+/* content heading */
+.content .name{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+/* some line about exercise */
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+/* some line about button (see more)*/
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+/* animation use in which intial at down 100px distance when the window is start the come with
+ delay 0.6 and with opacity 1 without bulr */
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 5vw;
+    height:5vh;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}

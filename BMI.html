@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATIONS</title>
+    <link rel="stylesheet" href="BMI.css">
+</head>
+<body>
+    <div class="bmi-container">
+        <!--  here we make header of bmi -->
+           <div class="bmi-header">
+               <div class="bmi-title">
+                      <div class="bmi-icon">
+                          <img src="bmi-icon.webp" alt="">
+                      </div>
+                     <div class="bmi-heading">
+                        <h1>Body Mass Index Calculator</h1>
+                     </div>
+               </div>
+              
+           </div>
+
+           <!-- all basic details of user which we need -->
+           <div class="bmi-info">
+
+            <form action="">
+
+                <div class="bmi-weight-input">
+
+                    <div class="bmi-weight-icon">
+                         <img src="weight-icon.png" alt="weight">
+                    </div>
+
+                    <div class="weight-input">
+                        <input type="number" placeholder="Type weight in kg" id="weight" min="25" max="500">
+                    </div>
+                    
+                </div>
+
+                <div class="bmi-height-input">
+                    
+                    <div class="bmi-weight-icon">
+                         <img src="height-icon.png" alt="weight">
+                    </div>
+
+                    <div class="weight-input">
+                        <input type="number" placeholder="Type height in centimeter" id="height" min="92" max="215">
+                    </div>
+                    
+                </div>
+
+                <div class="bmi-submit-btn" id="submit">
+                     <button>Submit</button>
+                </div>
+            </form>
+
+               <div class="bmi-output">
+
+                      <div class="bmi-output-icon">
+                          <img src="output icon.png" alt="">
+                      </div>
+
+                      <div  class="bmi-output-output" id="output">
+
+                      </div> 
+               </div>
+           
+
+           </div>
+    </div>
+       
+</body>
+    <script src="BMI.js"></script>
+</html>
