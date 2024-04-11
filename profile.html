@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="images/logo.png" class="logo" />
+        <ul>
+          <li><a href="#"> Home</a></li>
+          <li></li>
+          <li><a href="#"> Features</a></li>
+          <li></li>
+          <li><a href="#"> About</a></li>
+          <li></li>
+          <li><a href="#"> Contact</a></li>
+          <li></li>
+        </ul>
+        <img src="user.png" class="user-pick" onclick="toggleMenu()" />
+
+        <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div class="user-info">
+              <img src="s.png" />
+              <h3>RAVINDRA RINWA</h3>
+            </div>
+            <hr />
+
+            <a href="#" class="sub-menu-link">
+              <img src="Profile.png" />
+              <p>Edit Profile</p>
+              <span>></span>
+            </a>
+            <a href="#" class="sub-menu-link">
+              <img src="Setting.png" />
+              <p>Setting & Privacy</p>
+              <span>></span>
+            </a>
+
+            <a href="#" class="sub-menu-link">
+              <img src="Help.png" />
+              <p>Help & Support</p>
+              <span>></span>
+            </a>
+
+            <a href="#" class="sub-menu-link">
+              <img src="Logout.png" />
+              <p>Logout</p>
+              <span>></span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      let subMenu = document.getElementById("subMenu");
+
+      function toggleMenu() {
+        subMenu.classList.toggle("open-menu");
+      }
+    </script>
+  </body>
+</html>

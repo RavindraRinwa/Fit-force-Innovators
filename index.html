@@ -1,230 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FIT Force Innovators</title>
     <!-- this line use to add favicon -->
-    <link rel="shortcut icon" href="Designer (2).png" type="image/x-icon">
+    <link rel="shortcut icon" href="Designer (2).png" type="image/x-icon" />
     <!-- link with css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- swiper css (using swiper.js ) -->
     <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-</head>
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-    
+  <body>
     <!-- main container in which whole code lies -->
     <div class="main">
-    
-    <div class="container">
-
+      <div class="container">
         <div class="header">
- 
-            <!-- div-1 in which logo image is lie -->
-            <div class="logo-div">
-                 <img src="fit force logo.jpg" alt="">
-            </div>
-             <!-- div-2 giving heading  -->
-            <div class="img-logo-and-title-div">
-                <h1>FIT Force</h1>
-                <h2>Innovators</h2>
-            </div>
-            <!-- div-3 three nav bar -->
-            <div class="button-box">
-                    <h4><a href="index.html">Home</a></h4>
-                    <h4><a href="BMI.html">Goal</a></h4>
-                    <h4><a href="exercise_scrol.html" target="_self">Exercise</a></h4>
-                    <h4><a href="calendar.html">Schedule</a></h4>
-                    <h4><a href="about.html">About Us</a></h4>
-                    <h4><a href="signUP.html">Sign up</a></h4>
-                    <h4><a href="login.html">Login</a></h4>
-            </div>
-
+          <!-- div-1 in which logo image is lie -->
+          <div class="logo-div">
+            <img src="fit force logo.jpg" alt="" />
+          </div>
+          <!-- div-2 giving heading  -->
+          <div class="img-logo-and-title-div">
+            <h1>FIT Force</h1>
+            <h2>Innovators</h2>
+          </div>
+          <!-- div-3 three nav bar -->
+          <div class="button-box">
+            <h4><a href="index.html">Home</a></h4>
+            <h4><a href="BMI.html">Goal</a></h4>
+            <h4><a href="exercise_scrol.html" target="_self">Exercise</a></h4>
+            <h4><a href="calendar.html">Schedule</a></h4>
+            <h4><a href="about.html">About Us</a></h4>
+            <h4><a href="devjam.html">Sign up</a></h4>
+            <h4><a href="devjam.html">Login</a></h4>
+          </div>
         </div>
 
         <!-- div in which heading, paragraph and get started button -->
         <div class="content-div-1">
-
-            <div class="para-section-div-1">
-
-                <div class="div-1-heading-section">
-                    <span class="text first-text">MAKE HIMSELF</span>
-                    <span class="text second-text">SMART</span>
-                    <!-- script use for makeing variable heading -->
-                    <script>
-                        // select element
-                        const text = document.querySelector(".second-text");
-                        //function for changing word
-                        const textLoad = () => {
-                            // set time out function meaing delay in general but actualy have different meaning
-                            setTimeout(() => {
-                                text.textContent = "SMART";
-                            }, 0);
-                            setTimeout(() => {
-                                text.textContent = "HEALTHY";
-                            }, 4000);
-                            setTimeout(() => {
-                                text.textContent = "COOL";
-                            }, 8000);
-
-                        }
-                        textLoad();
-                        setInterval(textLoad, 12000);
-                    </script>
-                </div>
+          <div class="para-section-div-1">
+            <div class="div-1-heading-section">
+              <span class="text first-text">MAKE HIMSELF</span>
+              <span class="text second-text">SMART</span>
+              <!-- script use for makeing variable heading -->
+              <script>
+                // select element
+                const text = document.querySelector(".second-text");
+                //function for changing word
+                const textLoad = () => {
+                  // set time out function meaing delay in general but actualy have different meaning
+                  setTimeout(() => {
+                    text.textContent = "SMART";
+                  }, 0);
+                  setTimeout(() => {
+                    text.textContent = "HEALTHY";
+                  }, 4000);
+                  setTimeout(() => {
+                    text.textContent = "COOL";
+                  }, 8000);
+                };
+                textLoad();
+                setInterval(textLoad, 12000);
+              </script>
+            </div>
 
             <!-- paragraph section -->
-              <div class="div-1-para-section">
-                <div class="div-1-para-part">
-                    <p>Unleash your potential and feel your best! We offer a supportive community and a variety of
-                        fitness programs to help you reach your goals. Whether you're a seasoned athlete or just
-                        starting your journey, we'll guide you with personalized plans, expert advice, and
-                        motivation to
-                        keep you moving. Take control of your health and join us today! 
-                    </p>
-                </div>
-
+            <div class="div-1-para-section">
+              <div class="div-1-para-part">
+                <p>
+                  Unleash your potential and feel your best! We offer a
+                  supportive community and a variety of fitness programs to help
+                  you reach your goals. Whether you're a seasoned athlete or
+                  just starting your journey, we'll guide you with personalized
+                  plans, expert advice, and motivation to keep you moving. Take
+                  control of your health and join us today!
+                </p>
               </div>
-
-              <!-- get started button -->
-                    <div class="Explore-section-div-1">
-                        <a href="login.html"><button>Get Started</button></a>
-                    </div>
-                </div>
-
             </div>
 
-           <!-- basic details about previous user(upcoming goal)but here is dummy value -->
-            <div class="basic-details-about-user">
-
-                <div class="basic-details-about-user-item itema">
-                    <img src="statistics1.png" alt="S1">
-                    <h1>55%</h1>
-                    <p>Average people health growing</p>
-                </div>
-
-                <div class="basic-details-about-user-item itemb">
-                    <img src="statistics2.png" alt="S2">
-                    <h1>71%</h1>
-                    <p>People complete their Schedule</p>
-                </div>
-
-                <div class="basic-details-about-user-item itemc">
-                    <img src="statistics3.png" alt="S3">
-                    <h1>63%</h1>
-                    <p>People share this Content</p>
-                </div>
-
-                <div class="basic-details-about-user-item itemd">
-                    <img src="statistics4.png" alt="S4">
-                    <h1>87%</h1>
-                    <p>People complete their Goal</p>
-                </div>
-
+            <!-- get started button -->
+            <div class="Explore-section-div-1">
+              <a href="devjam.html"><button>Get Started</button></a>
             </div>
-
-            <!-- video add for some motivation and creativity -->
-            <div class="video-div-1">
-
-                <div class="video-div-2">
-                    <video src="videoplayback (1).webm"autoplay muted loop></video>
-                </div>
-
-            </div>
-
-            <!-- feedback from user page in swiper.js  -->
-            <div class="secondlast-page">
-
-
-                 <div class="heading-secondlast-page">
-                       <h1>Feedback From User</h1>
-                       <img src="feedback-icon-free-vector.jpg" alt="">
-                 </div>
-
-                 <!-- swiper soucre code which made with the help of open source code by making some changes and add some knowledge -->
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                         <img src="813-GtqZYHL._AC_UF894,1000_QL80_.jpg" alt="The Rock">
-                         <p>Fit Force Innovators is the ultimate workout companion for anyone dedicated to their fitness journey. Its robust tracking capabilities keep me aligned with my goals, ensuring every rep and set counts. The interface is intuitive, making it easy to navigate through my daily stats and progress. It’s not just a tracker; it’s a motivator that pushes me to exceed my limits. 
-                            </p>
-                      </div>
-                      <div class="swiper-slide">
-                          <img src="652397ae4f2795533eff08fd_6426c0e133f8c4833b475406_GettyImages-1348504658-min.webp" alt="">
-                          <p>Fit Force Innovators tracks my fitness with precision. It’s a vital part of my training regime, offering robust features that complement my active lifestyle. A true captain in the world of fitness wearables.</p>
-                      </div>
-                      <div class="swiper-slide">
-                          <img src="WomanWorkingOuToTVjpg.jpg" alt="">
-                          <p>Fit Force Innovators is a game-changer. Its sleek design fits my lifestyle, and the 
-                            tracking features keep my health and workouts in check. It's empowering to have such a reliable and chic fitness partner. Absolutely love it!</p>
-                      </div>
-                      <div class="swiper-slide">
-                          <img src="Modi-Ji-Photo-02-e1647325936821.jpg" alt="">
-                          <p>Fit Force Innovators exemplifies the spirit of innovation and fitness. It’s a commendable tool that aligns with my vision of a healthy India. Its technology empowers individuals to monitor and improve their well-being, contributing to the nation’s progress. Truly inspiring!</p>
-                      </div>
-                      <div class="swiper-slide">
-                           <img src="fitness-girls-model-hd-wallpaper-preview.jpg" alt="">
-                           <p>Fit Force Innovators is a powerhouse for fitness tracking. Durable, precise, and user-friendly, it’s essential for anyone 
-                            serious about their health. Keeps me focused and on track. Love it!</p>
-                      </div>
-                      <div class="swiper-slide">
-                            <img src="91a656da7b342d44c0330ba27676fa75.jpg" alt="">
-                            <p>Fit Force Innovators is a stellar fitness tracker. It’s sleek, efficient, and keeps up with my dynamic workouts. It’s not just about staying fit; it’s about a lifestyle of excellence and precision. A perfect match for anyone who values their health as much as their time. It’s an essential part of my daily regime, keeping me informed and motivated. A true performer, just like me.</p>
-                      </div>
-                      <div class="swiper-slide">
-                            <img src="cristiano-ronaldo-desktop-downloads-wallpaper-preview.jpg" alt="">
-                            <p>Fit Force Innovators is a top-tier fitness tracker. Its precision and advanced features keep me at the peak of my game. It’s essential for athletes who demand excellence and strive for continuous improvement. A champion’s choice.</p>
-                      </div>
-                      <div class="swiper-slide">
-                            <img src="Virat-Kohli-Workout-Routine-1200x900_615468b3c2f85.jpeg" alt="">
-                            <p>Fit Force Innovators is a champion’s fitness tracker. Its accuracy and detailed analytics help me refine my training. Essential for athletes committed to peak performance. It’s a winner, just like me.</p>
-                      </div>
-                      <div class="swiper-slide">
-                             <img src="5 female fitness myths, debunked by the pros.webp" alt="">
-                             <p>Fit Force Innovators is not just a fitness tracker; it’s a statement. It blends seamlessly with my style while providing unparalleled health insights. It’s empowering to have technology that caters to both my fitness and fashion needs. A must-have for any woman who values wellness and wants to look good while achieving it.</p>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="last-page">
-            </div>
-
+          </div>
         </div>
 
+        <!-- basic details about previous user(upcoming goal)but here is dummy value -->
+        <div class="basic-details-about-user">
+          <div class="basic-details-about-user-item itema">
+            <img src="statistics1.png" alt="S1" />
+            <h1>55%</h1>
+            <p>Average people health growing</p>
+          </div>
+
+          <div class="basic-details-about-user-item itemb">
+            <img src="statistics2.png" alt="S2" />
+            <h1>71%</h1>
+            <p>People complete their Schedule</p>
+          </div>
+
+          <div class="basic-details-about-user-item itemc">
+            <img src="statistics3.png" alt="S3" />
+            <h1>63%</h1>
+            <p>People share this Content</p>
+          </div>
+
+          <div class="basic-details-about-user-item itemd">
+            <img src="statistics4.png" alt="S4" />
+            <h1>87%</h1>
+            <p>People complete their Goal</p>
+          </div>
+        </div>
+
+        <!-- video add for some motivation and creativity -->
+        <div class="video-div-1">
+          <div class="video-div-2">
+            <video src="videoplayback (1).webm" autoplay muted loop></video>
+          </div>
+        </div>
+
+        <!-- feedback from user page in swiper.js  -->
+        <div class="secondlast-page">
+          <div class="heading-secondlast-page">
+            <h1>Feedback From User</h1>
+            <img src="feedback-icon-free-vector.jpg" alt="" />
+          </div>
+
+          <!-- swiper soucre code which made with the help of open source code by making some changes and add some knowledge -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="813-GtqZYHL._AC_UF894,1000_QL80_.jpg"
+                  alt="The Rock"
+                />
+                <p>
+                  Fit Force Innovators is the ultimate workout companion for
+                  anyone dedicated to their fitness journey. Its robust tracking
+                  capabilities keep me aligned with my goals, ensuring every rep
+                  and set counts. The interface is intuitive, making it easy to
+                  navigate through my daily stats and progress. It’s not just a
+                  tracker; it’s a motivator that pushes me to exceed my limits.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="652397ae4f2795533eff08fd_6426c0e133f8c4833b475406_GettyImages-1348504658-min.webp"
+                  alt=""
+                />
+                <p>
+                  Fit Force Innovators tracks my fitness with precision. It’s a
+                  vital part of my training regime, offering robust features
+                  that complement my active lifestyle. A true captain in the
+                  world of fitness wearables.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img src="WomanWorkingOuToTVjpg.jpg" alt="" />
+                <p>
+                  Fit Force Innovators is a game-changer. Its sleek design fits
+                  my lifestyle, and the tracking features keep my health and
+                  workouts in check. It's empowering to have such a reliable and
+                  chic fitness partner. Absolutely love it!
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img src="Modi-Ji-Photo-02-e1647325936821.jpg" alt="" />
+                <p>
+                  Fit Force Innovators exemplifies the spirit of innovation and
+                  fitness. It’s a commendable tool that aligns with my vision of
+                  a healthy India. Its technology empowers individuals to
+                  monitor and improve their well-being, contributing to the
+                  nation’s progress. Truly inspiring!
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="fitness-girls-model-hd-wallpaper-preview.jpg"
+                  alt=""
+                />
+                <p>
+                  Fit Force Innovators is a powerhouse for fitness tracking.
+                  Durable, precise, and user-friendly, it’s essential for anyone
+                  serious about their health. Keeps me focused and on track.
+                  Love it!
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img src="91a656da7b342d44c0330ba27676fa75.jpg" alt="" />
+                <p>
+                  Fit Force Innovators is a stellar fitness tracker. It’s sleek,
+                  efficient, and keeps up with my dynamic workouts. It’s not
+                  just about staying fit; it’s about a lifestyle of excellence
+                  and precision. A perfect match for anyone who values their
+                  health as much as their time. It’s an essential part of my
+                  daily regime, keeping me informed and motivated. A true
+                  performer, just like me.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="cristiano-ronaldo-desktop-downloads-wallpaper-preview.jpg"
+                  alt=""
+                />
+                <p>
+                  Fit Force Innovators is a top-tier fitness tracker. Its
+                  precision and advanced features keep me at the peak of my
+                  game. It’s essential for athletes who demand excellence and
+                  strive for continuous improvement. A champion’s choice.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="Virat-Kohli-Workout-Routine-1200x900_615468b3c2f85.jpeg"
+                  alt=""
+                />
+                <p>
+                  Fit Force Innovators is a champion’s fitness tracker. Its
+                  accuracy and detailed analytics help me refine my training.
+                  Essential for athletes committed to peak performance. It’s a
+                  winner, just like me.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="5 female fitness myths, debunked by the pros.webp"
+                  alt=""
+                />
+                <p>
+                  Fit Force Innovators is not just a fitness tracker; it’s a
+                  statement. It blends seamlessly with my style while providing
+                  unparalleled health insights. It’s empowering to have
+                  technology that caters to both my fitness and fashion needs. A
+                  must-have for any woman who values wellness and wants to look
+                  good while achieving it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="last-page"></div>
+      </div>
     </div>
 
     <!-- footer section -->
     <div class="footer">
-             <div class="footer-top">
+      <div class="footer-top"></div>
 
-             </div>
+      <div class="footer-name">
+        <h1>Fit Force</h1>
+        <h2>Innovators</h2>
+      </div>
 
-             <div class="footer-name">
-                <h1>Fit Force</h1>
-                <h2>Innovators</h2>
-             </div>
-            
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <h2> &copy Fit Force Innovators</h2>
-                </div>
-                <div class="instagram">
-                    <img src="17760a6daad2edf7f4d9b837b5437246.jpg" alt="">
-                    <h2>fit force Innovators.com</h2>
-                </div>
-                
-            </div>
+      <div class="footer-bottom">
+        <div class="copyright">
+          <h2>&copy Fit Force Innovators</h2>
+        </div>
+        <div class="instagram">
+          <img src="17760a6daad2edf7f4d9b837b5437246.jpg" alt="" />
+          <h2>fit force Innovators.com</h2>
+        </div>
+      </div>
     </div>
- 
+
     <!-- swiper js (frontend javascript) -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-</body>
-     <!-- our external js file -->
-      <script src="front.js"></script>
+  </body>
+  <!-- our external js file -->
+  <script src="front.js"></script>
 </html>

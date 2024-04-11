@@ -1,75 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI CALCULATIONS</title>
-    <link rel="stylesheet" href="BMI.css">
-</head>
-<body>
-    <div class="bmi-container">
+    <link rel="stylesheet" href="BMI.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bmi-container">
         <!--  here we make header of bmi -->
-           <div class="bmi-header">
-               <div class="bmi-title">
-                      <div class="bmi-icon">
-                          <img src="bmi-icon.webp" alt="">
-                      </div>
-                     <div class="bmi-heading">
-                        <h1>Body Mass Index Calculator</h1>
-                     </div>
-               </div>
-              
-           </div>
+        <div class="bmi-header">
+          <div class="bmi-title">
+            <div class="bmi-icon">
+              <img src="bmi-icon.webp" alt="" />
+            </div>
+            <div class="bmi-heading">
+              <h1>Body Mass Index Calculator</h1>
+            </div>
+          </div>
+        </div>
 
-           <!-- all basic details of user which we need -->
-           <div class="bmi-info">
+        <!-- all basic details of user which we need -->
+        <div class="bmi-info">
+          <form action="">
+            <div class="bmi-weight-input">
+              <div class="bmi-weight-icon">
+                <img src="weight-icon.png" alt="weight" />
+              </div>
 
-            <form action="">
+              <div class="weight-input">
+                <input
+                  type="number"
+                  placeholder="Type weight in kg"
+                  id="weight"
+                  min="25"
+                  max="500"
+                />
+              </div>
+            </div>
 
-                <div class="bmi-weight-input">
+            <div class="bmi-height-input">
+              <div class="bmi-weight-icon">
+                <img src="height-icon.png" alt="weight" />
+              </div>
 
-                    <div class="bmi-weight-icon">
-                         <img src="weight-icon.png" alt="weight">
-                    </div>
+              <div class="weight-input">
+                <input
+                  type="number"
+                  placeholder="Type height in centimeter"
+                  id="height"
+                  min="92"
+                  max="215"
+                />
+              </div>
+            </div>
 
-                    <div class="weight-input">
-                        <input type="number" placeholder="Type weight in kg" id="weight" min="25" max="500">
-                    </div>
-                    
-                </div>
+            <div class="bmi-submit-btn" id="submit">
+              <button>Submit</button>
+            </div>
+          </form>
 
-                <div class="bmi-height-input">
-                    
-                    <div class="bmi-weight-icon">
-                         <img src="height-icon.png" alt="weight">
-                    </div>
+          <div class="bmi-output">
+            <div class="bmi-output-icon">
+              <img src="output icon.png" alt="" />
+            </div>
 
-                    <div class="weight-input">
-                        <input type="number" placeholder="Type height in centimeter" id="height" min="92" max="215">
-                    </div>
-                    
-                </div>
+            <div class="bmi-output-output" id="output"></div>
+          </div>
+        </div>
+      </div>
 
-                <div class="bmi-submit-btn" id="submit">
-                     <button>Submit</button>
-                </div>
-            </form>
-
-               <div class="bmi-output">
-
-                      <div class="bmi-output-icon">
-                          <img src="output icon.png" alt="">
-                      </div>
-
-                      <div  class="bmi-output-output" id="output">
-
-                      </div> 
-               </div>
-           
-
-           </div>
+      <div class="containerExercise">
+        <div class="exItem">
+          <div class="exlabel">
+            <div class="icon">
+              <img src="77f0c69c_Fitness_16MinPowerPushUp_1_.jpg" alt="" />
+            </div>
+            <div class="link">
+              <a href="push_up.html"><h1>Push Up</h1></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-       
-</body>
-    <script src="BMI.js"></script>
+  </body>
+  <script src="BMI.js"></script>
 </html>

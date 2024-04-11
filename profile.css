@@ -28,6 +28,11 @@ nav{
     cursor:pointer;
     margin-left: 30px;
 }
+.user-pick img{
+    height:50px;
+    width:50px;
+    border-radius:50px;
+}
 .user-info img{
     margin-right : 15px;
     width: 60px;

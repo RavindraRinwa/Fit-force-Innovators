@@ -1,6 +1,3 @@
-// here we access all the need elements of the html 
-// throughh query selector
-
 const calendar = document.querySelector(".calendar"),
   date = document.querySelector(".date"),
   daysContainer = document.querySelector(".days"),
@@ -20,13 +17,11 @@ const calendar = document.querySelector(".calendar"),
   addEventTo = document.querySelector(".event-time-to "),
   addEventSubmit = document.querySelector(".add-event-btn ");
 
-let today = new Date(); // this is used to initialise the  new date object
+let today = new Date();
 let activeDay;
-let month = today.getMonth();  // getmonth is the elemnt of  the date object here 
-let year = today.getFullYear(); //full year is the element of the date object here 
+let month = today.getMonth();
+let year = today.getFullYear();
 
-
-// months is an array of the months name 
 const months = [
   "January",
   "February",
@@ -42,17 +37,29 @@ const months = [
   "December",
 ];
 
+// const eventsArr = [
+//   {
+//     day: 13,
+//     month: 11,
+//     year: 2022,
+//     events: [
+//       {
+//         title: "Event 1 lorem ipsun dolar sit genfa tersd dsad ",
+//         time: "10:00 AM",
+//       },
+//       {
+//         title: "Event 2",
+//         time: "11:00 AM",
+//       },
+//     ],
+//   },
+// ];
 
-
-// eventarr is the variable is used to store the function getEVents 
 const eventsArr = [];
 getEvents();
-
+console.log(eventsArr);
 
 //function to add days in days with class day and prev-date next-date on previous month and next month days and active on today
-
-
-
 function initCalendar() {
   const firstDay = new Date(year, month, 1);
   const lastDay = new Date(year, month + 1, 0);
@@ -67,7 +74,7 @@ function initCalendar() {
   let days = "";
 
   for (let x = day; x > 0; x--) {
-    days += <div class="day prev-date">${prevDays - x + 1}</div>;
+    days += `<div class="day prev-date">${prevDays - x + 1}</div>`;
   }
 
   for (let i = 1; i <= lastDate; i++) {
@@ -91,21 +98,21 @@ function initCalendar() {
       getActiveDay(i);
       updateEvents(i);
       if (event) {
-        days += <div class="day today active event">${i}</div>;
+        days += `<div class="day today active event">${i}</div>`;
       } else {
-        days += <div class="day today active">${i}</div>;
+        days += `<div class="day today active">${i}</div>`;
       }
     } else {
       if (event) {
-        days += <div class="day event">${i}</div>;
+        days += `<div class="day event">${i}</div>`;
       } else {
-        days += <div class="day ">${i}</div>;
+        days += `<div class="day ">${i}</div>`;
       }
     }
   }
 
   for (let j = 1; j <= nextDays; j++) {
-    days += <div class="day next-date">${j}</div>;
+    days += `<div class="day next-date">${j}</div>`;
   }
   daysContainer.innerHTML = days;
   addListner();
@@ -230,7 +237,7 @@ function getActiveDay(date) {
   eventDate.innerHTML = date + " " + months[month] + " " + year;
 }
 
-//function is used for day and date to change 
+//function update events when a day is active
 function updateEvents(date) {
   let events = "";
   eventsArr.forEach((event) => {
@@ -261,7 +268,7 @@ function updateEvents(date) {
   saveEvents();
 }
 
-//function is used for the class to  add  which i define in the css file 
+//function to add event
 addEventBtn.addEventListener("click", () => {
   addEventWrapper.classList.toggle("active");
 });
@@ -283,6 +290,8 @@ addEventTitle.addEventListener("input", (e) => {
 
 function defineProperty() {
   var osccred = document.createElement("div");
+  osccred.innerHTML =
+    "A Project By <a href='https://www.youtube.com/channel/UCiUtBDVaSmMGKxg1HYeK-BQ' target=_blank>Open Source Coding</a>";
   osccred.style.position = "absolute";
   osccred.style.bottom = "0";
   osccred.style.right = "0";

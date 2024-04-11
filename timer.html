@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript Countdown Time | 2024</title>
+    <link rel="stylesheet" href="timer.css" />
+  </head>
+  <body>
+    <div id="time">
+      <div class="circle" style="--clr: #1eb9ff">
+        <svg>
+          <circle cx="70" cy="70" r=" 70" id="dd"></circle>
+        </svg>
+        <div id="days">00<br /><span>Days</span></div>
+      </div>
+      <div class="circle" style="--clr: #ff2972">
+        <svg>
+          <circle cx="70" cy="70" r=" 70" id="hh"></circle>
+        </svg>
+        <div id="hours">00<br /><span>Hours</span></div>
+      </div>
+      <div class="circle" style="--clr: #fee800">
+        <svg>
+          <circle cx="70" cy="70" r=" 70" id="mm"></circle>
+        </svg>
+        <div id="minutes">00<br /><span>Minutes</span></div>
+      </div>
+      <div class="circle" style="--clr: #04fc43">
+        <svg>
+          <circle cx="70" cy="70" r=" 70" id="ss"></circle>
+        </svg>
+        <div id="seconds">00<br /><span>Seconds</span></div>
+      </div>
+    </div>
+
+    <h2 class="newYear">2024<br /><span>Happy New Year</span></h2>
+    <script>
+      let days = document.getElementById("days");
+      let hours = document.getElementById("hours");
+      let minutes = document.getElementById("minutes");
+      let seconds = document.getElementById("seconds");
+
+      let dd = document.getElementById("dd");
+      let hh = document.getElementById("hh");
+      let mm = document.getElementById("mm");
+      let ss = document.getElementById("ss");
+
+      // let endDate = "11/04/2024 19:13";
+
+      let endDate = "11/04/2024 11:50 PM";
+
+      // Splitting the date string into its components
+      let endDateComponents = endDate.split(/[\/\s:]+/);
+
+      // Constructing a new Date object using the components
+      let year = endDateComponents[2];
+      let month = endDateComponents[1] - 1; // Months are 0-indexed in JavaScript
+      let day = endDateComponents[0];
+      let hour =
+        (endDateComponents[3] % 12) +
+        (endDateComponents[5].toLowerCase() === "pm" ? 12 : 0);
+      let minute = endDateComponents[4];
+      let second = 0; // Setting seconds to 0 since they are not provided in the endDate string
+
+      let endDateObject = new Date(year, month, day, hour, minute, second);
+
+      console.log(endDateObject.getTime()); // Log the time in milliseconds
+
+      let x = setInterval(function () {
+        let now = endDateObject.getTime();
+        console.log(now);
+        let Countdown = new Date().getTime();
+        console.log(Countdown);
+        let distance = now - Countdown;
+
+        //time calculation for days hours minutes and seconds
+        let d = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let h = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let s = Math.floor((distance % (1000 * 60)) / 1000);
+
+        //output the results in element with id
+        days.innerHTML = d + "<br><span>Days</span>";
+        hours.innerHTML = h + "<br><span>Hours</span>";
+        minutes.innerHTML = m + "<br><span>Minutes</span>";
+        seconds.innerHTML = s + "<br><span>Seconds</span>";
+
+        //Animate stroke
+        dd.style.strokeDashoffset = 440 - (440 * d) / 365;
+        //365 days in a year
+        hh.style.strokeDashoffset = 440 - (440 * h) / 24;
+        //24 hours in a day
+        mm.style.strokeDashoffset = 440 - (440 * m) / 60;
+        //60 minutes in a hour
+        ss.style.strokeDashoffset = 440 - (440 * s) / 60;
+        //60 seconds in a minute
+
+        //if the count down in over, write happy new year text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("time").style.display = "none";
+          document.querySelector("newYear").style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>
