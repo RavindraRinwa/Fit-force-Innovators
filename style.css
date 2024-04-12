@@ -4,6 +4,7 @@
     padding:0;
     box-sizing: border-box;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
 }
 /* main contianer */
 .main{
@@ -15,6 +16,7 @@
     max-width: 100vw;
     min-height:100vh;
     overflow:hidden;
+    
 }
 /* header 
   display is flex so that we can a good header without use of absolute position which is not good practice.
@@ -262,6 +264,7 @@
         text-wrap:pretty;
     }
 
+
 .Explore-section-div-1 button{
     margin-top: 3vw;
     margin-left:2vw;
@@ -288,6 +291,59 @@
 } */
 
 /* basic details about  user */
+.container-content-div2{
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    /* align-items:center;
+    flex-direction:column; */
+}
+.content-div2{
+    height:70%;
+    width:70%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    border:solid black 1px;
+    background-image:url(mapty-background3.jpg);
+    border-radius:3%;
+    justify-content:space-evenly;
+    row-gap:20vw;
+}
+
+
+.content-div2-heading{
+    height:10%;
+    width:100%;
+    text-align: center;
+    border:solid black 1px;
+    color:white;
+}
+.content-div2-heading h1{
+    font-weight:300;
+    font-size:3.5vw;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mapty-btn {
+    height:10vh;
+    width:10vw;
+    text-align: center;
+}
+.mapty-btn button{
+    height:8vh;
+    width:10vw;
+    font-size:2.2vw;
+    cursor: pointer;
+    font-weight: 100;
+    background-color:rgb(46, 32, 32);
+    color:white;
+    border-radius:1vw;
+}
+.mapty-btn button:hover{
+    color:rgb(17, 171, 213);
+}
 .basic-details-about-user{
     position: relative;
     width:100vw;
@@ -399,77 +455,150 @@
   }
 
 /*  create blank page so that they give filling like sutter open */
-.last-page{
+/* .last-page{
     width:100vw;
     height:100vh;
-}
+} */
 
-/* footer position is fixed so that we can create effect like sutter open */
-.footer{
-    position:fixed;
-    z-index:-111;
-    height:120vh;
-    width:100vw;
-    bottom: 0;
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display = swap');
+.bodyf{
+    min-height:100%;
+    max-width:100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:flex-end;
-    background:black;
-    padding:1vw 3vw;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+    background: #333;
 }
-
-/* basic css of footer */
-.footer .footer-name  h1{
-   font-size:10vw;
-   font-weight: 400;
-   color: white;
-}
-.footer .footer-name h2{
-    font-size:10vw;
-    font-weight: 600;
-    color:white;
- }
-
- .footer-top{
-     height:20vh;
-     width:100vw;
-     background: red;
- }
-
- .footer-bottom{
+footer{
     position: relative;
-    height:15vh;
-    width:100vw;
-    border-top:solid 2px white;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
     display: flex;
-    justify-content:space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.copyright h2{
-    font-size:3vw;
-    font-weight:200;
-    color:white;
-}
-
-.instagram{
-    /* position:absolute; */
-    height:15vh;
-    width:50vw;
+footer .social_icon,
+footer .menu
+{
+    position: relative;
     display: flex;
-    align-items:center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-wrap: wrap;
+    z-index:10000000000;
+}
+footer .social_icon li,
+footer .menu li
+{
+    list-style: none;
+}
+footer .social_icon li a
+{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon li a:hover
+{
+    transform: translateY(-10px);
 }
 
+footer .menu li a
+{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
 
-.instagram img{
+footer .menu li a:hover
+{
+    opacity: 1;
+}
+footer p
+{
+    color:#fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+footer  .wave
+{
     position: absolute;
-    left:40vw;
-    height:10vh;
-    width:10vw;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background :url(wave.png);
+    background-size: 1000px 100px;
 }
-.instagram h2{
-    font-size:3vw;
-    font-weight:200;
-    color:white;
+footer .wave#wave1
+{
+    z-index: 10000;
+    opacity: 1;
+    bottom:0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2
+{
+    z-index: 9999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3
+{
+    z-index: 10000;
+    opacity: 0.2;
+    bottom:15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4
+{
+    z-index: 9999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave
+{
+    0%{
+        background-position-x:1000px;
+    }
+    100%
+    {
+        background-position-x:0;
+    }  
+}
+
+@keyframes animateWave_02
+{
+    0%{
+        background-position-x:0px;
+    }
+    100%
+    {
+        background-position-x:1000px;
+    }  
 }

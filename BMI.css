@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns:repeat(2,1fr);
     grid-template-rows:repeat(1,1fr);
+    /* background-image: url('bmi-background2.jpg'); */
 }
 .containerExercise{
     position:relative;
@@ -25,6 +26,7 @@
     background-color:white;
     border:solid black 2px;
     border-radius:10px;
+    background-image:url('last-background-image.jpg');
 }
 .exlabel{
     display:flex;
@@ -40,7 +42,7 @@
     text-decoration:none;
 }
 .exlabel h1{
-    color:rgba(113, 106, 249, 0.542);
+    color:aqua;
 }
 .exlabel img{
     margin-top:1vw;
